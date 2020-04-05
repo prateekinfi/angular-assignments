@@ -1,0 +1,26 @@
+
+<app-todoform (evtemitter)="addTodoToList($event)"></app-todoform>
+<br><br>
+<p>My Todos :</p>
+<table class="todotable">
+    <tr>
+        <th>User Id</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Completed status</th>
+        <th>Complete</th>
+    </tr>
+    <tr *ngFor="let todo of todolist">
+        <td>{{todo.userId}}</td>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td [textContent]="(todo.completed)? 'Completed' : 'Pending'"></td>
+        <td><button (click)="completeTodo(todo.id);">Remove</button></td>
+    </tr>
+</table>
+
+<!-- 
+public userId: number = 1,
+public id: number = 1,
+public title: string = `delectus aut autem`,
+public completed: boolean = false -->

@@ -1,0 +1,19 @@
+<span>Add a new Todo : </span>
+<br>
+
+<table class="todotable">
+    <tr>
+        <th>User Id</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Completed status</th>
+        <th>Complete</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="Enter userId.." (keyup)="userid=$event.target.value"></td>
+        <td><input type="text" placeholder="Enter id.." (keyup)="id=$event.target.value"></td>
+        <td><input type="text" placeholder="Enter title.." (keyup)="title=$event.target.value"></td>
+        <td>false</td>
+        <td><button (click)="addTodo()">Add</button></td>
+    </tr>
+</table>
