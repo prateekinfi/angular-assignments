@@ -1,6 +1,15 @@
 <h1>Comments</h1>
-
-
+<div class="card-container">
+<div class="card" *ngFor="let i of data">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">PostId : {{i.postId}}</li>
+      <li class="list-group-item">Id : {{i.id}}</li>
+      <li class="list-group-item">Name : {{i.name}}</li>
+      <li class="list-group-item">Email : {{i.email}}</li>
+      <li class="list-group-item">Body : {{i.body}}</li>
+    </ul>
+</div>
+</div>
 <table class="commenttable">
     <tr>
         <th>PostId</th>

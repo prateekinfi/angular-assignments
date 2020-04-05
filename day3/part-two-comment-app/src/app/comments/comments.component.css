@@ -7,3 +7,9 @@ table, th , td {
     width: 100%;
     padding: 10px;
 }
+
+
+.card{
+    padding-top:30px;
+    width : 80%;
+}
