@@ -1,0 +1,19 @@
+<h1>Comments</h1>
+
+
+<table class="commenttable">
+    <tr>
+        <th>PostId</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let i of data">
+        <td>{{i.postId}}</td>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.body}}</td>
+    </tr>
+</table>
