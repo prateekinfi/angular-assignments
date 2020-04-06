@@ -3,16 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
+import { MessageComponent } from './message/message.component';
+import { MessageService } from './message.service';
+import { HttpErrorHandler } from './http-error-handler.service';
+import { TodoService } from './todo.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    TodoComponent,
+    MessageComponent
   ],
   imports: [
-    BrowserModule
-  ],
-  providers: [],
+  BrowserModule,
+  HttpClientModule
+],
+  providers: [MessageService,HttpErrorHandler,TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
