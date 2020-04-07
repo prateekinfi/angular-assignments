@@ -1,5 +1,6 @@
 <p>My Todos :</p>
-<app-search></app-search>
+<app-search [dataToBeFiltered]="backuplist" (evtemitter)="updateData($event)"></app-search>
+<!-- " -->
 <table class="todotable">
     <tr>
         <th>User Id</th>

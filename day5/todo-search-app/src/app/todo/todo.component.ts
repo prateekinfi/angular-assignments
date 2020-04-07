@@ -9,10 +9,18 @@ import { TodoService } from './../todo.service';
 export class TodoComponent implements OnInit {
 
   todolist;
-  constructor(private todoservice:TodoService) { }
+  backuplist;
+  constructor(private todoservice: TodoService) { }
 
   ngOnInit(): void {
-    this.todoservice.getData().subscribe(i=>this.todolist=i);
+    this.todoservice.getData().subscribe(i => {
+      this.todolist = i;
+      this.backuplist = this.todolist;
+    });
+
+  }
+  updateData(data) {
+    this.todolist = data;
   }
 
 }

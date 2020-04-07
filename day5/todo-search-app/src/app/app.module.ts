@@ -9,6 +9,8 @@ import { HttpErrorHandler } from './http-error-handler.service';
 import { TodoService } from './todo.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { SearchService } from './search.service';
 
 
 @NgModule({
@@ -19,10 +21,15 @@ import { SearchComponent } from './search/search.component';
     SearchComponent
   ],
   imports: [
-  BrowserModule,
-  HttpClientModule
-],
-  providers: [MessageService,HttpErrorHandler,TodoService],
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [MessageService,
+    SearchService,
+    HttpErrorHandler,
+    TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
