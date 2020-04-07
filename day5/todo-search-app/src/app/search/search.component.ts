@@ -13,7 +13,7 @@ import { SearchService } from './../search.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private searchservice:SearchService) { }
+  constructor(private searchservice: SearchService) { }
 
   //searchservice:SearchService;
   //myform: FormGroup
@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
   // completed: FormControl;
 
   @Output()
-  evtemitter=new EventEmitter();
+  evtemitter = new EventEmitter();
 
   parameter: FormControl;
 
@@ -39,23 +39,22 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.filterdData = [];
-    this.searchservice 
+    this.searchservice
     //= new SearchService();
     this.parameter = new FormControl("");
     this.searchField = new FormControl('');
 
     this.searchField.valueChanges
       .pipe(
-        debounceTime(1000),
-        filter(v => v !== '')
-      ).subscribe(item => {
+        debounceTime(1000)
+          ).subscribe(item => {
         //console.log(item);
         //console.log(this.parameter.value);
         //console.log(this.dataToBeFiltered);
-        if(this.parameter.value=="" || item=="")
-        this.filterdData =this.dataToBeFiltered;
+        if (this.parameter.value == "" || item == "")
+          this.filterdData = this.dataToBeFiltered;
         else
-        this.filterdData =this.searchservice.filterData(this.dataToBeFiltered,this.parameter.value,item);
+          this.filterdData = this.searchservice.filterData(this.dataToBeFiltered, this.parameter.value, item);
         console.log("Filtered data" + this.filterdData);
         this.evtemitter.emit(this.filterdData);
       })
