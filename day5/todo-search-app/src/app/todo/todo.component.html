@@ -1,0 +1,16 @@
+<p>My Todos :</p>
+<app-search></app-search>
+<table class="todotable">
+    <tr>
+        <th>User Id</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Completed status</th>
+    </tr>
+    <tr *ngFor="let todo of todolist">
+        <td>{{todo.userId}}</td>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td [textContent]="(todo.completed)? 'Completed' : 'Pending'"></td>
+    </tr>
+</table>
