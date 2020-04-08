@@ -7,11 +7,11 @@ import { Injectable } from '@angular/core';
     providedIn:"root"
 })
 export class CommentsService{
-    constructor(public commentsdata:Array<Comment> = data){}
+
 
     listData():Promise<Array<Comment>>{
         return new Promise((resolve) => {
-            resolve(this.commentsdata);   
+            resolve(data);   
         });   
      }
   
