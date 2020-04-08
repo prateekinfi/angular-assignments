@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommentsComponent } from './comments/comments.component';
+import { CommentsService } from './comments/comments.service';
 
 @NgModule({
   declarations: [
@@ -11,10 +12,10 @@ import { CommentsComponent } from './comments/comments.component';
     CommentsComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

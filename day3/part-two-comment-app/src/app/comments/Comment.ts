@@ -1,7 +1,7 @@
 export class Comment {
-
+ 
     constructor(
-        public postId,
+        public postId: number,
         public id: number,
         public name: string,
         public email: string,
