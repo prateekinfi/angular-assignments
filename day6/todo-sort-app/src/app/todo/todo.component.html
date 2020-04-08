@@ -1,0 +1,23 @@
+<p>My Todos :</p>
+
+<input type="radio" name="orderInput" [formControl]="orderInput" id="asc" value="asc">
+<label for="asc">Ascending </label>
+
+<input type="radio" name="orderInput" [formControl]="orderInput" id="dsc" value="dsc">
+<label for="dsc">Descending  </label>
+
+
+<table class="todotable">
+    <tr>
+        <th>User Id</th>
+        <th>Id<button (click)="sort()">Sort</button></th>
+        <th>Title</th>
+        <th>Completed status</th>
+    </tr>
+    <tr *ngFor="let todo of todolist | async | sort:order">
+        <td>{{todo.userId}}</td>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td [textContent]="(todo.completed)? 'Completed' : 'Pending'"></td>
+    </tr>
+</table>
