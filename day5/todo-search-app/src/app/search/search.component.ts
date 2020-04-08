@@ -30,7 +30,6 @@ export class SearchComponent implements OnInit {
 
   @Input()
   dataToBeFiltered: Array<Todo>;
-
   // @Input()
   // backupData : Array<Todo>;
 
@@ -41,7 +40,9 @@ export class SearchComponent implements OnInit {
     this.filterdData = [];
     this.searchservice
     //= new SearchService();
-    this.parameter = new FormControl("");
+    this.parameter = new FormControl("id");
+    console.log(this.parameter);
+   // this.parameter.value="id";
     this.searchField = new FormControl('');
 
     this.searchField.valueChanges
