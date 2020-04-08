@@ -9,7 +9,7 @@ export class CommentsService{
 
     listData(){
         return new Promise((resolve) => {
-            resolve(commentsdata);   
+            resolve(this.commentsdata);   
         });   
      }
   
