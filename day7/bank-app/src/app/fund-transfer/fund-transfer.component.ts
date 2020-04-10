@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { fundTransferData } from './../mock/fundTransferData';
 
 @Component({
   selector: 'app-fund-transfer',
@@ -9,11 +8,9 @@ import { fundTransferData } from './../mock/fundTransferData';
 })
 export class FundTransferComponent implements OnInit {
 
-  fundstransferdata;
   constructor(private routerState: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.fundstransferdata=fundTransferData;
   }
 
 }

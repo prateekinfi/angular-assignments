@@ -13,7 +13,7 @@ export class BillPayAndRechargeComponent implements OnInit {
   constructor(private routerState: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.billpayandrechargedata=billPayAndRechargeData;
+    this.billpayandrechargedata = billPayAndRechargeData;
   }
 
 }
