@@ -11,7 +11,7 @@ import { Todo } from './Todo';
 })
 export class TodoComponent implements OnInit {
   todolist: Observable<Array<Todo>>;
-  order: string;
+  order: string = "asc";
   orderInput : FormControl;
   constructor(private todoservice:TodoService) { }
 
