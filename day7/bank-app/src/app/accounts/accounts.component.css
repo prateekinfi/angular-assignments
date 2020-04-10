@@ -1,0 +1,7 @@
+table , td {
+    border : 1px solid black;
+}
+.container-table{
+    text-align: center;
+    width: 100%;
+}
