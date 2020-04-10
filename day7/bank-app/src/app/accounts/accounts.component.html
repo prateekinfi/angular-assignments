@@ -1,1 +1,22 @@
-<p>accounts works!</p>
+
+<table class="container-table">
+    <tr>
+        <th>Date</th>
+        <th>Narration</th>
+        <th>Cheque/Ref. No.</th>
+        <th>Value Date</th>
+        <th>Withdrawal</th>
+        <th>Deposit</th>
+        <th>Closing Balance</th>
+    </tr>
+    <tr *ngFor="let item of accountsdata">
+       <td>{{item.date}}</td>
+       <td>{{item.narration}}</td>
+       <td>{{item.chequeRefNo}}</td>
+       <td>{{item.valueDate}}</td>
+       <td>{{item.withdrawal}}</td>
+       <td>{{item.deposit}}</td>
+       <td>{{item.closingBalance}}</td>
+
+    </tr>
+</table>
